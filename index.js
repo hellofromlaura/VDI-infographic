@@ -5,7 +5,8 @@ let isMobile = false;
 var x = window.matchMedia("(max-width: 768px)");
 showSlides(SlideIndex);
 myFunction(x);
-x.addListener(myFunction);
+x.addEventListener("change", myFunction);
+x.addEventListener("change", function(){ location.reload(); });
 
 function plusSlides(plus) {
     showSlides(SlideIndex += plus);
@@ -78,10 +79,12 @@ jQuery(function($) {
   
 //   https://nickpiscitelli.github.io/Glider.js/
 
-  new Glider(document.querySelector('.glider'), {
+var glider = new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     slidesToScroll: 1,
     scrollLock: true,
+    draggable: true,
+    rewind: true,
     dots: '.dots',
     arrows: {
       prev: '.glider-prev',
@@ -90,6 +93,8 @@ jQuery(function($) {
     responsive: [
       {
         breakpoint: 768,
+        draggable: true,
+        rewind: true,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,

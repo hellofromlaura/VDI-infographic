@@ -166,13 +166,13 @@ p {
 .animated.progress .left {
   animation: load1 1s ease forwards; 
 }
-.animated.progress:first-of-type .right { 
+.animated.progress.blue .right { 
   animation: load2 .8s linear forwards 1s;
 }
-.animated.progress:nth-of-type(2) .right {
+.animated.progress.green .right {
   animation: load3 .5s linear forwards 1s;
 }
-.animated.progress:last-of-type .right {
+.animated.progress.yellow .right {
   animation: load4 .8s linear forwards 1s;
 }
 @keyframes load1 {

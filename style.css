@@ -1,0 +1,707 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Cisco Sans TT', sans-serif;
+}
+h1 {
+    font-size: 46px;
+    line-height: 56px;
+    color: #0D274D;
+}
+h2 {
+    font-size: 38px;
+    line-height: 46px;
+    color: #0D274D;
+}
+p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #0D274D;
+}
+
+.logo-section {
+    background-color: #00bceb;
+}
+.logo {
+    display: block;
+    width: 50%;
+    padding: 70px;
+    margin: 0px auto;
+}
+.intro-section,
+.info-section {
+    position: relative;
+    background-color: #0D274D;
+    color: #F2F2F2;
+}
+.intro-description > h1,
+.info-section > h1{
+    color: #F2F2F2;
+}
+.intro-description > p {
+    color: #F2F2F2;
+}
+.intro-image,
+.intro-description,
+.info-section > h1 {
+    padding: 40px 70px;
+    margin: 0;
+}
+.info-section {
+    text-align: center;
+}
+.info-section > p {
+    color: #00BCEB;
+}
+.info-section > img {
+    margin: 0 0 40px;
+    max-width: 40%;
+}
+.button {
+    display: inline-block;
+    width: 200px;
+    margin: 20px 0px 40px;
+    padding: 12px 30px;
+    border-radius: 20px;
+    background-color: #00bceb;
+    color: #fff;
+    text-decoration: none;
+}
+.button:hover {
+    filter: brightness(1.2);
+    color: #fff;
+    text-decoration: none;
+}
+.sub-section {
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 40px 70px;
+}
+.stats-section {
+    background-image: url('images/Cisco-Globe.gif');
+    background-size: 100%;
+    background-position: -28%, 50%;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    padding: 30px 0;
+}
+.progress-div {
+    display:flex;
+    height: 120px;
+    margin: 20px 0 0 0;
+}
+
+
+.stats-container {
+    max-width: 55%;
+    float: right;
+}
+.progress {
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+    color: #0D274D;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 120px;
+    margin: 0;
+    float: left;
+}
+.progress.blue {
+    margin: 0;
+}
+.progress .title {
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    font-size: 24px;
+}
+.progress-info {
+    width: 60%;
+    margin: auto 30px;
+    float: right;
+}
+.progress .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 15px solid #F2F2F2;
+    border-radius: 50%; 
+} 
+.progress .left, .progress .right {
+    width: 50%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    transform-origin: right; 
+}
+.progress.blue .left, .progress.blue .right {
+    border: 15px solid #00BCEB;
+    border-radius: 100px 0px 0px 100px; 
+    border-right: 0;
+}
+.progress.green .left, .progress.green .right {
+    border: 15px solid #6ABF4B;
+    border-radius: 100px 0px 0px 100px; 
+    border-right: 0;
+}
+.progress.yellow .left, .progress.yellow .right {
+    border: 15px solid #FBAB18;
+    border-radius: 100px 0px 0px 100px; 
+    border-right: 0;
+}
+.animated.progress .left {
+  animation: load1 1s ease forwards; 
+}
+.animated.progress:first-of-type .right { 
+  animation: load2 .8s linear forwards 1s;
+}
+.animated.progress:nth-of-type(2) .right {
+  animation: load3 .5s linear forwards 1s;
+}
+.animated.progress:last-of-type .right {
+  animation: load4 .8s linear forwards 1s;
+}
+@keyframes load1 {
+    0% {z-index: 100; opacity: 0;transform: rotate(0deg);}
+    100% {z-index: 100; transform: rotate(180deg);}
+}
+@keyframes load2 {
+    0% {z-index: 100;transform: rotate(180deg);}
+
+    100% {z-index: 100;transform: rotate(360deg);}
+} 
+@keyframes load3 {
+    0% {z-index: 100;transform: rotate(180deg);}
+ 
+    100% {
+        z-index: 100;transform: rotate(219deg);}
+}
+@keyframes load4 {
+    0% {z-index: 100;transform: rotate(180deg);}
+
+    100% {
+        z-index: 100;transform: rotate(270deg);}
+}
+.stats-info {
+    width: 300px;
+}
+.infrastructure-div,
+.slide-div {
+    padding: 40px 70px;
+    text-align: center;
+}
+.infrastructure-img {
+    width: 95%;
+    display: block;
+    margin: 0px auto;
+}
+.infrastructure-h2,
+.info-h2 {
+    width: 95%;
+    display: block;
+    margin: 30px auto 0;
+}
+
+/* TEST */
+.slideshow-container {
+    padding: 40px 70px;
+}
+.glider-contain {
+    width: 100% !important;
+}
+
+.slide-title {
+    position: fixed;
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 40px 70px;
+    width: 100vw;
+}
+.slide-img {
+    width: 60%;
+    display: block;
+    margin: 0px auto 30px;
+}
+.slide-text {
+    position: relative;
+    background-color: #00bceb;
+    height: 250px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+.slide-text > p {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 20%;
+    transform: translate(-13%, -50%);
+    text-align: center;
+}
+.glider-next, .glider-prev {
+    position: relative !important;
+}
+
+/* TEST */
+
+.prev-img {
+    position: relative;
+    float: left;
+    top: -215px;
+    width: 4%;
+    margin: 0 0 0 30px;
+    cursor:pointer;
+}
+.next-img {
+    position: relative;
+    float: right;
+    top: -215px;
+    width: 4%;
+    margin: 0 30px 0 0;
+    cursor:pointer;
+}
+.glider-dot {
+    display: inline-block;
+    margin: 20px 15px 0px;
+    height: 25px;
+    width: 25px;
+    background-color: #00BCEB !important;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+.glider-dot.active {
+    opacity: 1 !important;
+}
+.info-section > h2 {
+    color: #F2F2F2;
+    margin: 40px auto
+}
+.footer {
+    background-color: #00bceb;
+}
+.footer-logos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 10px;
+    grid-auto-rows: auto;
+    grid-template-areas: "a b b b c d e e e f g";
+}
+.cisco-logo {
+    grid-area: b;
+    max-width: 130%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.separator {
+    grid-area: d;
+    margin: 40px auto; 
+    max-height: 120px;
+}
+.footer-logos > p {
+    grid-area: e;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: right;
+    transform: translateY(-50%);
+}
+.intel-logo {
+    grid-area: f;
+    position: absolute;
+    margin: 0 0 0 20px;
+    top: 50%;
+    max-width: 90%;
+    transform: translateY(-50%);
+}
+.footer > p {
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 40px;
+}
+/* Animations */
+.animatable {
+    visibility: hidden;
+    animation-play-state: paused; 
+  }
+  .animated {
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-play-state: running;
+  }
+
+@keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+
+	60% {
+		transform: translateX(20px);
+	}
+
+	80% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+
+	60% {
+		transform: translateX(-20px);
+	}
+
+	80% {
+		transform: translateX(5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animated.animationDelay{
+	animation-delay:.4s;
+	-webkit-animation-delay:.4s;
+}
+.animated.bounceInRight {
+	animation-name: bounceInRight;
+}
+.animated.bounceInLeft {
+	animation-name: bounceInLeft;
+}
+.animated.fadeInUp {
+	animation-name: fadeInUp;
+}
+
+@media screen and (min-width: 1200px) {
+    .slide-text {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .logo {
+        width: 60%;
+    }
+    .intro-image, .intro-description, .info-section > h1 {
+        padding: 40px;
+    }
+    .progress-info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .infrastructure-div, .slide-div {
+        padding: 40px 45px;
+    }
+    .slide-img {
+        width: 65%;
+    }
+    .slide-text {
+        height: 310px;
+    }
+    .prev-img,
+    .next-img {
+        top: -225px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+        color: #0D274D;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+        color: #0D274D;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D274D;
+    } 
+    .logo {
+        padding: 55px;
+    }
+    .intro-description,
+    .info-section > h1 {
+        padding: 30px;
+    }
+    .intro-image {
+        padding: 30px;
+    }
+    .sub-section {
+        padding: 30px;
+    }
+    .stats-section {
+        background-size: 115%;
+        background-position: 115%, 50%;
+        min-height: 385px;
+        /* padding: 0; */
+    }
+    .progress-div {
+        margin: 10px 0 0 0;
+        height: 95px;
+    }
+    .stats-container {
+        max-width: 70%;
+    }
+    .progress {
+        width: 95px;
+        height: 95px;
+        line-height: 95px;
+    }
+    .progress-info {
+        width: 67%;
+        margin: auto 10px;
+    }
+    .infrastructure-div,
+    .slide-div {
+        padding: 30px 45px;
+    }
+    .slide-img {
+        width: 50%;
+    }
+    .slide-text {
+        height: 150px;
+    }
+    .glider-dot {
+        margin: 20px 10px 0px;
+        height: 20px;
+        width: 20px;
+    }
+    .prev-img, .next-img {
+        top: -180px;
+    }
+    .next-img {
+        margin: 0 50px 0 0;
+    }
+    .prev-img {
+        margin: 0 0 0 50px;
+    }
+    .glider::-webkit-scrollbar-thumb {
+        background-color : #fff;  
+    }
+    .row>* {
+        width: 33.33%;
+    }
+ }
+ @media screen and (max-width: 660px) {
+    /* .progress-info {
+        margin: -117px 0 0 108px;
+    } */
+}
+@media screen and (max-width: 576px) { 
+    h1 {
+        font-size: 28px;
+        line-height: 34px;
+        color: #0D274D;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+        color: #0D274D;
+    }
+    p {
+        font-size: 16px;
+        line-height: 22px;
+        color: #0D274D;
+    } 
+    .logo {
+        padding: 40px;
+        width: 100%;
+    }
+    #first {
+        order: 1;
+    }
+    #second {
+        order: 2;
+    }
+    .intro-image,
+    .info-section > h1 {
+        padding: 25px;
+    }
+    .intro-image {
+        width: 80% !important;
+        margin: 0 auto;
+        padding-bottom: 0px;
+    }
+    .intro-description {
+        width: 100%;
+        margin: 0 auto;
+        padding: 25px 10px;
+        text-align: center;
+    }
+    .sub-section {
+        padding: 25px;
+    }
+    .stats-section {
+        background-position: 85%, 50%;
+        min-height: 525px;
+        background-image: none;
+        float: none;
+        overflow:auto;
+    }
+    .progress-div {
+        display: block;
+        height: 250px;
+    }
+    .stats-container {
+        max-width: 95%;
+    }
+    .progress,
+    .progress.blue {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        margin: 0 auto;
+        float: none;
+    }
+    .progress-info {
+        width: 100%;
+        padding: 25px;
+        margin: 0px;
+        text-align: center;
+    }
+    .progress .title {
+        font-size: 28px;
+    }
+    .infrastructure-div,
+    .slide-div {
+        padding: 10px 0 30px;
+    }
+    .slide-img {
+        width: 80%
+    }
+    .slide-text {
+        margin: 0;
+        height: 280px;
+    }
+    .next-img,
+    .prev-img {
+        width: 10%;
+        top: -235px;
+    }
+    .glider-dot {
+        margin: 20px 5px 0px;
+        height: 10px;
+        width: 10px;
+    }
+    .row>* {
+        width: 100%;
+    }
+    .info-section > h2 {
+        margin: 25px auto
+    }
+    .infrastructure-col {
+        padding-top: 30px;
+    }
+    .infrastructure-h2 {
+        margin-top: 20px;
+    }
+    .infrastructure-img {
+        width: 50%;
+    }
+    .footer-logos {
+        display: block;
+    }
+    .cisco-logo {
+        position: relative;
+        display: block;
+        transform: none;
+        max-width: 90%;
+        margin: 0px auto;
+        padding: 25px;
+    }
+    .separator {
+        display: none;
+    }
+    .intel-logo {
+        position: relative;
+        display: block;
+        float: right;
+        width: 40%;
+        margin: 55px 0 0 0;
+        padding: 0 35px;
+    }
+    .footer > p {
+        padding: 0 10px 10px;
+    }
+    .footer-logos > p {
+        position: relative;
+        display: block;
+        float: left;
+        width: 60%;
+        margin: 55px 0 0;
+    }
+    .footer-right {
+        display: block;
+        width: 100%;
+        overflow: auto;
+    }
+ }
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'Cisco Sans';
+    src: url('fonts/CiscoSansTTLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+  @font-face {
+    font-family: 'Cisco Sans';
+    src: url('fonts/CiscoSansTTRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cisco Sans';
+    src: url('fonts/CiscoSansTT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

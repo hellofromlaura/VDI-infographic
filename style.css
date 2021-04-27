@@ -255,30 +255,27 @@ p {
 .glider-next, .glider-prev {
     position: relative !important;
 }
-
-/* TEST */
-
 .prev-img {
     position: relative;
     float: left;
-    top: -215px;
-    width: 4%;
-    margin: 0 0 0 30px;
+    top: -240px;
+    width: 40px;
+    margin: 0 0 0 40px;
     cursor:pointer;
 }
 .next-img {
     position: relative;
     float: right;
-    top: -215px;
-    width: 4%;
-    margin: 0 30px 0 0;
+    top: -240px;
+    width: 40px;
+    margin: 0 40px 0 0;
     cursor:pointer;
 }
 .glider-dot {
     display: inline-block;
     margin: 20px 15px 0px;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #00BCEB !important;
     opacity: 0.5;
     border-radius: 50%;
@@ -289,6 +286,13 @@ p {
 .info-section > h2 {
     color: #F2F2F2;
     margin: 40px auto
+}
+.link-block {
+    display: block;
+    color: #F2F2F2;
+}
+.link-block:hover {
+    color: #00bceb;
 }
 .footer {
     background-color: #00bceb;
@@ -398,6 +402,11 @@ p {
     .slide-text {
         height: 190px;
     }
+    .prev-img,
+    .next-img {
+        width: 50px;
+        top: -220px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -422,7 +431,7 @@ p {
     }
     .prev-img,
     .next-img {
-        top: -225px;
+        top: -270px;
     }
 }
 
@@ -445,9 +454,12 @@ p {
     .logo {
         padding: 55px;
     }
+    .intro-description {
+        width: 66% !important;
+    }
     .intro-description,
     .info-section > h1 {
-        padding: 30px;
+        padding: 55px;
     }
     .intro-image {
         padding: 30px;
@@ -459,7 +471,6 @@ p {
         background-size: 115%;
         background-position: 115%, 50%;
         min-height: 385px;
-        /* padding: 0; */
     }
     .progress-div {
         margin: 10px 0 0 0;
@@ -489,11 +500,9 @@ p {
     }
     .glider-dot {
         margin: 20px 10px 0px;
-        height: 20px;
-        width: 20px;
     }
     .prev-img, .next-img {
-        top: -180px;
+        top: -185px;
     }
     .next-img {
         margin: 0 50px 0 0;
@@ -508,11 +517,7 @@ p {
         width: 33.33%;
     }
  }
- @media screen and (max-width: 660px) {
-    /* .progress-info {
-        margin: -117px 0 0 108px;
-    } */
-}
+
 @media screen and (max-width: 576px) { 
     h1 {
         font-size: 28px;
@@ -599,10 +604,16 @@ p {
         margin: 0;
         height: 280px;
     }
+    .next-img {
+        margin: 0px 30px 0 0;
+    }
+    .prev-img {
+        margin: 0 0 0 30px;
+    }
     .next-img,
     .prev-img {
-        width: 10%;
-        top: -235px;
+        width: 40px;
+        top: -240px;
     }
     .glider-dot {
         margin: 20px 5px 0px;

@@ -290,6 +290,7 @@ p {
 .link-block {
     display: block;
     color: #F2F2F2;
+    padding-bottom: 40px;
 }
 .link-block:hover {
     color: #00bceb;
@@ -671,6 +672,9 @@ p {
         display: block;
         width: 100%;
         overflow: auto;
+    }
+    .link-block {
+        padding-bottom: 25px;
     }
  }
 

@@ -685,21 +685,21 @@ p {
 /* fonts */
 @font-face {
     font-family: 'Cisco Sans';
-    src: url('/c/dam/m/en_us/products/servers-unified-computing/ucs-x-series-modular-system/x-series-infographic/fonts/CiscoSansTTLight.woff') format('woff');
+    src: url('fonts/CiscoSansTTLight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
   @font-face {
     font-family: 'Cisco Sans';
-    src: url('/c/dam/m/en_us/products/servers-unified-computing/ucs-x-series-modular-system/x-series-infographic/fonts/CiscoSansTTRegular.woff') format('woff');
+    src: url('fonts/CiscoSansTTRegular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Cisco Sans';
-    src: url('/c/dam/m/en_us/products/servers-unified-computing/ucs-x-series-modular-system/x-series-infographic/fonts/CiscoSansTT-Medium.woff') format('woff');
+    src: url('fonts/CiscoSansTT-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;

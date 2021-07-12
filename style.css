@@ -8,7 +8,7 @@ body {
     padding: 0 20px;
     margin: 0 auto;
     font-family: 'Cisco Sans TT', sans-serif;
-    background: #f2f2f2;
+    background: #fff;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%)
 }
 h1 {
@@ -28,7 +28,7 @@ p {
 }
 
 .logo-section {
-    background-color: #00bceb;
+    background-color: #F2F2F2;
 }
 .logo {
     display: block;
@@ -36,24 +36,45 @@ p {
     padding: 70px;
     margin: 0px auto;
 }
-.intro-section,
+.intro-section {
+    position: relative;
+    display: flex;
+    background-color: #0D274D;
+    color: #524f4f;
+    height: 100%;
+    width: 100%;
+    overflow:auto; 
+}
 .info-section {
     position: relative;
     background-color: #0D274D;
     color: #F2F2F2;
+    height: 370px;
+    padding: 0;
+    margin: 0;
 }
 .intro-description > h1,
 .info-section > h1{
     color: #F2F2F2;
+    text-shadow: 1px 1px 1px #000;
 }
 .intro-description > p {
-    color: #F2F2F2;
+    color: #00BCEB;
+    text-shadow: 1px 1px 1px #000;
 }
-.intro-image,
+.intro-description {
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+}
+.intro-image {
+    width: 100%;
+    object-fit: cover;
+}
 .intro-description,
 .info-section > h1 {
-    padding: 40px 70px;
-    margin: 0;
+    padding: 0px 0px 0px 70px;
+
 }
 .info-section {
     text-align: center;
@@ -86,11 +107,11 @@ p {
     padding: 40px 70px;
 }
 .stats-section {
-    background-image: url('images/Cisco-Globe.gif');
-    background-size: 100%;
-    background-position: -28%, 50%;
+    background-image: url('Composites/workers-stacked.png');
+    background-size: 50%;
+    background-position: -0%, 50%;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 800px;
     padding: 30px 0;
 }
 .progress-div {
@@ -104,6 +125,7 @@ p {
     max-width: 55%;
     float: right;
 }
+.progress-1,
 .progress {
     width: 120px;
     height: 120px;
@@ -120,6 +142,7 @@ p {
 .progress.blue {
     margin: 0;
 }
+.progress-1 .title,
 .progress .title {
     position: relative;
     z-index: 100;
@@ -131,6 +154,7 @@ p {
     margin: auto 30px;
     float: right;
 }
+.progress-1 .overlay,
 .progress .overlay {
     width: 100%;
     height: 100%;
@@ -142,6 +166,7 @@ p {
     border: 15px solid #F2F2F2;
     border-radius: 50%; 
 } 
+.progress-1 .left, .progress-1 .right,
 .progress .left, .progress .right {
     width: 50%;
     height: 100%;
@@ -160,13 +185,24 @@ p {
     border-radius: 100px 0px 0px 100px; 
     border-right: 0;
 }
-.progress.yellow .left, .progress.yellow .right {
+.progress-1.yellow .left,
+.progress.yellow .left {
     border: 15px solid #FBAB18;
     border-radius: 100px 0px 0px 100px; 
     border-right: 0;
 }
+.progress-1.yellow .right,
+.progress.yellow .right {
+    border: 15px solid #F2F2F2;
+    border-radius: 100px 0px 0px 100px; 
+    border-right: 0;
+}
+
 .animated.progress .left {
   animation: load1 1s ease forwards; 
+}
+.animated.progress-1 .left {
+  animation: load 1s ease forwards;
 }
 .animated.progress.blue .right { 
   animation: load2 .8s linear forwards 1s;
@@ -174,8 +210,18 @@ p {
 .animated.progress.green .right {
   animation: load3 .5s linear forwards 1s;
 }
-.animated.progress.yellow .right {
-  animation: load4 .8s linear forwards 1s;
+.animated.progress-1.yellow .right {
+  animation: load4 .8s linear forwards ;
+}
+.animated.progress.blue.two .right { 
+    animation: load5 .8s linear forwards 1s;
+}
+.animated.progress.green.two .right {
+animation: load6 .5s linear forwards 1s;
+}
+@keyframes load {
+    0% {z-index: 100; opacity: 0;transform: rotate(0deg);}
+    100% {z-index: 100; transform: rotate(144deg);}
 }
 @keyframes load1 {
     0% {z-index: 100; opacity: 0;transform: rotate(0deg);}
@@ -184,20 +230,33 @@ p {
 @keyframes load2 {
     0% {z-index: 100;transform: rotate(180deg);}
 
-    100% {z-index: 100;transform: rotate(360deg);}
+    100% {z-index: 100;transform: rotate(252deg);}
 } 
 @keyframes load3 {
     0% {z-index: 100;transform: rotate(180deg);}
  
     100% {
-        z-index: 100;transform: rotate(219deg);}
+        z-index: 100;transform: rotate(313deg);}
 }
 @keyframes load4 {
     0% {z-index: 100;transform: rotate(180deg);}
 
     100% {
-        z-index: 100;transform: rotate(270deg);}
+        z-index: 100;transform: rotate(360deg);}
 }
+@keyframes load5 {
+    0% {z-index: 100;transform: rotate(180deg);}
+ 
+    100% {
+        z-index: 100;transform: rotate(259deg);}
+}
+@keyframes load6 {
+    0% {z-index: 100;transform: rotate(180deg);}
+ 
+    100% {
+        z-index: 100;transform: rotate(216deg);}
+}
+
 .stats-info {
     width: 300px;
 }
@@ -240,7 +299,7 @@ p {
 }
 .slide-text {
     position: relative;
-    background-color: #00bceb;
+    background-color: #F2F2F2;
     height: 250px;
     padding: 30px;
     border-radius: 20px;
@@ -297,8 +356,11 @@ p {
 .link-block:hover {
     color: #00bceb;
 }
+.final-section {
+    padding-top: 70px;
+}
 .footer {
-    background-color: #00bceb;
+    background-color: #F2F2F2;
 }
 .footer-logos {
     position: relative;
@@ -320,18 +382,11 @@ p {
     margin: 40px auto; 
     max-height: 120px;
 }
-.footer-logos > p {
-    grid-area: e;
+
+.nvidia-logo {
+    grid-area:  e;
     position: absolute;
-    width: 100%;
-    top: 50%;
-    text-align: right;
-    transform: translateY(-50%);
-}
-.intel-logo {
-    grid-area: f;
-    position: absolute;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 40px;
     top: 50%;
     max-width: 90%;
     transform: translateY(-50%);
@@ -401,6 +456,7 @@ p {
 	animation-name: fadeInUp;
 }
 
+
 @media screen and (min-width: 1200px) {
     .slide-text {
         height: 190px;
@@ -413,11 +469,20 @@ p {
 }
 
 @media screen and (max-width: 992px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+        color: #0D274D;
+    }
     .logo {
         width: 60%;
     }
-    .intro-image, .intro-description, .info-section > h1 {
+    .intro-description, .info-section > h1 {
         padding: 40px;
+    }
+    .stats-section {
+        background-size: 80%;
+        background-position: -105%, 50%;
     }
     .progress-info {
         font-size: 14px;
@@ -462,18 +527,19 @@ p {
     }
     .intro-description,
     .info-section > h1 {
-        padding: 55px;
+        padding: 20px;
     }
-    .intro-image {
-        padding: 30px;
+    .intro-description > h1 {
+        font-size: 25px;
+        line-height: 30px;
     }
     .sub-section {
         padding: 30px;
     }
     .stats-section {
-        background-size: 115%;
-        background-position: 115%, 50%;
-        min-height: 385px;
+        background-size: 70%;
+        background-position: -90%, 50%;
+        min-height: 585px;
     }
     .progress-div {
         margin: 10px 0 0 0;
@@ -482,6 +548,7 @@ p {
     .stats-container {
         max-width: 70%;
     }
+    .progress-1,
     .progress {
         width: 95px;
         height: 95px;
@@ -528,7 +595,7 @@ p {
         color: #0D274D;
     }
     h2 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 28px;
         color: #0D274D;
     }
@@ -536,6 +603,7 @@ p {
         font-size: 16px;
         line-height: 22px;
         color: #0D274D;
+        margin-bottom: 0;;
     } 
     .logo {
         padding: 40px;
@@ -547,20 +615,25 @@ p {
     #second {
         order: 2;
     }
-    .intro-image,
     .info-section > h1 {
         padding: 25px;
     }
+    .intro-description > h1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .intro-description > p {
+        font-size: 12px;
+        line-height: 15px;
+    }
     .intro-image {
-        width: 80% !important;
         margin: 0 auto;
         padding-bottom: 0px;
     }
     .intro-description {
         width: 100%;
         margin: 0 auto;
-        padding: 25px 10px;
-        text-align: center;
+        padding: 10px;
     }
     .sub-section {
         padding: 25px;
@@ -579,6 +652,7 @@ p {
     .stats-container {
         max-width: 95%;
     }
+    .progress-1,
     .progress,
     .progress.blue {
         width: 150px;
@@ -593,6 +667,7 @@ p {
         margin: 0px;
         text-align: center;
     }
+    .progress-1 .title,
     .progress .title {
         font-size: 28px;
     }
@@ -652,12 +727,12 @@ p {
     .separator {
         display: none;
     }
-    .intel-logo {
+    .nvidia-logo {
         position: relative;
         display: block;
-        float: right;
-        width: 40%;
-        margin: 55px 0 0 0;
+        float: none;
+        width: 60%;
+        margin: 20px auto 20px;
         padding: 0 35px;
     }
     .footer > p {

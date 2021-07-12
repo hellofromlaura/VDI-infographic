@@ -270,7 +270,16 @@ animation: load6 .5s linear forwards 1s;
     display: block;
     margin: 0px auto;
 }
-.infrastructure-h2,
+.infrastructure-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 15px 0 0;
+}
+.infrastructure-h2 {
+    width: 95%;
+    display: block;
+    margin: 15px auto 0;
+}
 .info-h2 {
     width: 95%;
     display: block;

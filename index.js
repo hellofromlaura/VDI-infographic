@@ -1,9 +1,3 @@
-$(function(){
-  $('[data-bs-toggle="tooltip"]').tooltip();
-});
-
-
-
 // Slider
 var SlideIndex = 0;
 let isMobile = false;

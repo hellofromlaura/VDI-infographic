@@ -150,11 +150,36 @@ p {
     font-size: 24px;
 }
 .progress-info {
+    position: relative;
+    display: inline-block;
     cursor: help;
     width: 60%;
     margin: auto 30px;
-    float: right;
 }
+.tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+  }
+  .progress-info .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .progress-info:hover .tooltiptext {
+    visibility: visible;
+  }
 .progress-1 .overlay,
 .progress .overlay {
     width: 100%;
@@ -200,25 +225,25 @@ p {
 }
 
 .animated.progress .left {
-  animation: load1 1s ease forwards; 
+    animation: load1 1s ease forwards; 
 }
 .animated.progress-1 .left {
-  animation: load 1s ease forwards;
+    animation: load 1s ease forwards;
 }
 .animated.progress.blue .right { 
-  animation: load2 .8s linear forwards 1s;
+    animation: load2 .8s linear forwards 1s;
 }
 .animated.progress.green .right {
-  animation: load3 .5s linear forwards 1s;
+    animation: load3 .5s linear forwards 1s;
 }
 .animated.progress-1.yellow .right {
-  animation: load4 .8s linear forwards ;
+    animation: load4 .8s linear forwards ;
 }
 .animated.progress.blue.two .right { 
     animation: load5 .8s linear forwards 1s;
 }
 .animated.progress.green.two .right {
-animation: load6 .5s linear forwards 1s;
+    animation: load6 .5s linear forwards 1s;
 }
 @keyframes load {
     0% {z-index: 100; opacity: 0;transform: rotate(0deg);}
@@ -464,7 +489,7 @@ animation: load6 .5s linear forwards 1s;
 	animation-name: bounceInLeft;
 }
 .animated.fadeInUp {
-    animation-duration: 4s;
+    animation-duration: 0.5s;
 	animation-name: fadeInUp;
 }
 
